@@ -37,7 +37,7 @@ public class Main {
     int tern = 10;
 
     int year = 1;
-    while (year < tern) {
+    while (year <= tern) {
         population = population + population * (birthRate - deathRate) / 1000;
         System.out.println(String.format("Год %S , численность населения составит %S " , year , population));
         year++;
@@ -59,14 +59,18 @@ public class Main {
 
     System.out.println("Задача 5");
 
-    int capitalFirst = 15_000;
-    int percentOf = capitalFirst / 70;
-    int capPercent = capitalFirst + percentOf;
-    int withPennyTotal = 0;
-    for (int sixMonth = 0; sixMonth < 177; sixMonth = sixMonth + 6) {
-        withPennyTotal = withPennyTotal + withPennyTotal / 70;
-        withPennyTotal = withPennyTotal + capPercent;
-        System.out.println("Месяц " + sixMonth + " , сумма накоплений равна " + withPennyTotal + " рублей");
+    int percentOf = 7;
+    int summ = 15_000;
+    int goal = 12_000_000;
+
+    int monthFirst = 1;
+
+    while (summ < goal) {
+          summ += summ * percentOf / 100;
+          if (monthFirst % 6 == 0) {
+              System.out.println(String.format("Месяц %S , сумма накоплений составдяет %S", monthFirst, summ));
+          }
+          monthFirst++;
     }
 
     System.out.println("Задача 6");
@@ -89,7 +93,7 @@ public class Main {
 
     int week = 7;
     int oursMonth = 31;
-    for (int friday = 1; friday < oursMonth; friday = friday + week) {
+    for (int friday = 1; friday <= oursMonth; friday = friday + week) {
         System.out.println(" Сегодня пятница " + friday + "-е число. Необходимо подготовить еженедельный отчет.");
     }
 
@@ -99,7 +103,7 @@ public class Main {
     int nextYear = 100;
     int lastYear = 200;
 
-    int currentYear = 2023;
+    int currentYear = 2023 + 73;
 
     for (int dat = currentYear - lastYear; dat < currentYear + nextYear; dat = dat + cometFrequency) {
         if (dat / currentYear == 0) {
@@ -107,16 +111,6 @@ public class Main {
         }
     }
 
-    System.out.println("Задача 8а");
 
-    int ifYearNow = 2017;
-    int yearLast = 200;
-    int yearNext = 100;
-    int arrivalFrequency = 79;
-    int date = ifYearNow - yearLast;
-    int endOf = ifYearNow + yearNext;
-    for (int dat = date; dat < endOf; dat = dat + arrivalFrequency) {
-        System.out.println(dat);
-    }
     }
 }
