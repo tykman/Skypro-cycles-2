@@ -100,14 +100,14 @@ public class Main {
     System.out.println("Задача 8");
 
     int cometFrequency = 79;
-    int nextYear = 100;
-    int lastYear = 200;
+    int nextYear =  100;
+    int lastYear =  200;
 
-    int currentYear = 2023 + 73;
+    int currentYear = 2023;
 
-    for (int dat = currentYear - lastYear; dat < currentYear + nextYear; dat = dat + cometFrequency) {
-        if (dat / currentYear == 0) {
-            System.out.println(dat);
+    for (int dat = currentYear - lastYear; dat < currentYear + nextYear; dat++) {
+        if (dat % cometFrequency == 0) {
+        System.out.println(dat);
         }
     }
 
